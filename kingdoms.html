@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Organism Classification Review</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.5; }
+    h2 { color: #2c3e50; }
+    .question { margin-bottom: 20px; }
+    .result { margin-top: 10px; font-weight: bold; }
+    button { margin-top: 10px; padding: 8px 12px; }
+  </style>
+</head>
+<body>
+  <h2>Organism Classification Review</h2>
+  <p>Read each description. Choose whether it belongs to: <b>Virus, Bacteria, Protist, or Fungi</b>.</p>
+
+  <div class="question">
+    <p><b>1.</b> This organism is not considered living, and it needs a host cell to reproduce.</p>
+    <select id="q1">
+      <option value="">--Select--</option>
+      <option>Virus</option>
+      <option>Bacteria</option>
+      <option>Protist</option>
+      <option>Fungi</option>
+    </select>
+    <div class="result" id="r1"></div>
+  </div>
+
+  <div class="question">
+    <p><b>2.</b> This single-celled organism has no nucleus, can reproduce by binary fission, and some types can make toxins.</p>
+    <select id="q2">
+      <option value="">--Select--</option>
+      <option>Virus</option>
+      <option>Bacteria</option>
+      <option>Protist</option>
+      <option>Fungi</option>
+    </select>
+    <div class="result" id="r2"></div>
+  </div>
+
+  <div class="question">
+    <p><b>3.</b> These organisms can be unicellular or multicellular, live in water, and include things like amoebas and algae.</p>
+    <select id="q3">
+      <option value="">--Select--</option>
+      <option>Virus</option>
+      <option>Bacteria</option>
+      <option>Protist</option>
+      <option>Fungi</option>
+    </select>
+    <div class="result" id="r3"></div>
+  </div>
+
+  <div class="question">
+    <p><b>4.</b> These organisms are multicellular, do not make their own food, and absorb nutrients from decaying matter.</p>
+    <select id="q4">
+      <option value="">--Select--</option>
+      <option>Virus</option>
+      <option>Bacteria</option>
+      <option>Protist</option>
+      <option>Fungi</option>
+    </select>
+    <div class="result" id="r4"></div>
+  </div>
+
+  <button onclick="checkAnswers()">Check Answers</button>
+
+  <script>
+    function checkAnswers() {
+      const answers = {
+        q1: "Virus",
+        q2: "Bacteria",
+        q3: "Protist",
+        q4: "Fungi"
+      };
+
+      for (let i = 1; i <= 4; i++) {
+        let q = document.getElementById("q" + i).value;
+        let r = document.getElementById("r" + i);
+        if (q === "") {
+          r.textContent = "Please select an answer.";
+          r.style.color = "orange";
+        } else if (q === answers["q" + i]) {
+          r.textContent = "Correct!";
+          r.style.color = "green";
+        } else {
+          r.textContent = "Incorrect. The correct answer is " + answers["q" + i] + ".";
+          r.style.color = "red";
+        }
+      }
+    }
+  </script>
+</body>
+</html>
