@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Lesson 2 — Fill-in-the-Blank (Dropdowns)</title>
+<style>
+  body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial; background:#f7fbfc; color:#0f172a; margin:20px;}
+  .container{max-width:880px;margin:0 auto;background:#fff;border-radius:12px;padding:22px;box-shadow:0 8px 30px rgba(13,38,59,0.06);}
+  h1{margin:0 0 6px;font-size:20px;}
+  p.lead{margin:6px 0 18px;color:#475569;}
+  .para{margin-bottom:18px;line-height:1.6;}
+  select{padding:6px 8px;border-radius:6px;border:1px solid #cbd5e1;background:white;font-size:15px;}
+  .controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;}
+  button{background:#2563eb;color:white;padding:10px 14px;border-radius:8px;border:0;font-weight:700;cursor:pointer;}
+  button.secondary{background:transparent;color:#2563eb;border:1px solid #dbeafe;}
+  .result{margin-top:14px;padding:12px;border-radius:8px;}
+  .correct{background:#ecfdf5;border-left:4px solid #16a34a;color:#065f46;}
+  .incorrect{background:#fff1f2;border-left:4px solid #dc2626;color:#7f1d1d;}
+  .score{font-weight:800;}
+  .answer-key{margin-top:12px;padding:12px;border-radius:8px;background:#fbfeff;border:1px dashed #e6f6fb;color:#0f172a;}
+  .small{font-size:13px;color:#475569;}
+  label.blank{display:inline-block;min-width:180px;}
+  @media (max-width:640px){ label.blank{min-width:120px;display:block;margin-top:6px;} }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Lesson 2 — Fill-in-the-Blank (Dropdowns)</h1>
+    <p class="lead">Select the best word from each dropdown. Each dropdown has three options from the lesson word bank.</p>
+
+    <div class="para">
+      <strong>Microorganisms</strong><br>
+      Very small organisms are called
+      <label class="blank"><select id="q1">
+        <option value="">— choose —</option>
+        <option value="Microorganisms">Microorganisms</option>
+        <option value="Bacteria">Bacteria</option>
+        <option value="Virus">Virus</option>
+      </select></label>.
+      Some belong to the domain
+      <label class="blank"><select id="q2">
+        <option value="">— choose —</option>
+        <option value="Eukarya">Eukarya</option>
+        <option value="Bacteria">Bacteria</option>
+        <option value="Archaea">Archaea</option>
+      </select></label>, which includes plants, animals, fungi, and
+      <label class="blank"><select id="q3">
+        <option value="">— choose —</option>
+        <option value="Protists">Protists</option>
+        <option value="Eukaryotes">Eukaryotes</option>
+        <option value="Bacteria">Bacteria</option>
+      </select></label>.
+      Organisms without a nucleus are called
+      <label class="blank"><select id="q4">
+        <option value="">— choose —</option>
+        <option value="Prokaryotes">Prokaryotes</option>
+        <option value="Eukaryotes">Eukaryotes</option>
+        <option value="Autotrophs">Autotrophs</option>
+      </select></label>, while those with a nucleus are called
+      <label class="blank"><select id="q5">
+        <option value="">— choose —</option>
+        <option value="Eukaryotes">Eukaryotes</option>
+        <option value="Protists">Protists</option>
+        <option value="Bacteria">Bacteria</option>
+      </select></label>.
+
+      Two important ways microorganisms get energy are: making their own food, which makes them
+      <label class="blank"><select id="q6">
+        <option value="">— choose —</option>
+        <option value="Autotrophs">Autotrophs</option>
+        <option value="Heterotrophs">Heterotrophs</option>
+        <option value="Decomposers">Decomposers</option>
+      </select></label>, or consuming other organisms, which makes them
+      <label class="blank"><select id="q7">
+        <option value="">— choose —</option>
+        <option value="Heterotrophs">Heterotrophs</option>
+        <option value="Autotrophs">Autotrophs</option>
+        <option value="Protists">Protists</option>
+      </select></label>. Organisms that break down dead matter are called
+      <label class="blank"><select id="q8">
+        <option value="">— choose —</option>
+        <option value="Decomposers">Decomposers</option>
+        <option value="Endospore">Endospore</option>
+        <option value="Ribosomes">Ribosomes</option>
+      </select></label>.
+
+      <br><br>
+      <label class="blank"> <select id="q9">
+        <option value="">— choose —</option>
+        <option value="Archaea">Archaea</option>
+        <option value="Protists">Protists</option>
+        <option value="Virus">Virus</option>
+      </select></label> are prokaryotes that often live in extreme environments like hot springs or salty water.
+      <label class="blank"> <select id="q10">
+        <option value="">— choose —</option>
+        <option value="Bacteria">Bacteria</option>
+        <option value="Fungi">Fungi</option>
+        <option value="Protists">Protists</option>
+      </select></label> are prokaryotes too, but they have different structures and are found almost everywhere.
+    </div>
+
+    <div class="para">
+      <strong>Viruses</strong><br>
+      A
+      <label class="blank"><select id="q11">
+        <option value="">— choose —</option>
+        <option value="Virus">Virus</option>
+        <option value="Bacteria">Bacteria</option>
+        <option value="Protists">Protists</option>
+      </select></label> is a tiny, nonliving particle that reproduces only inside a living cell. The organism it invades is called the
+      <label class="blank"><select id="q12">
+        <option value="">— choose —</option>
+        <option value="Host">Host</option>
+        <option value="Endospore">Endospore</option>
+        <option value="Cytoplasm">Cytoplasm</option>
+      </select></label>. A virus that attacks bacteria is called a
+      <label class="blank"><select id="q13">
+        <option value="">— choose —</option>
+        <option value="Bacteriophage">Bacteriophage</option>
+        <option value="Ribosomes">Ribosomes</option>
+        <option value="Flagella">Flagella</option>
+      </select></label>.
+
+      Viruses come in many shapes and are measured in
+      <label class="blank"><select id="q14">
+        <option value="">— choose —</option>
+        <option value="Nanometers">Nanometers</option>
+        <option value="Cytoplasm">Cytoplasm</option>
+        <option value="Endospore">Endospore</option>
+      </select></label> (nm). Unlike living organisms, they cannot reproduce on their own — instead, they inject
+      <label class="blank"><select id="q15">
+        <option value="">— choose —</option>
+        <option value="Genetic material">Genetic material</option>
+        <option value="Toxins">Toxins</option>
+        <option value="Ribosomes">Ribosomes</option>
+      </select></label> into a host cell, which then makes new viruses until the cell bursts.
+
+      Viruses can cause diseases from the common cold to
+      <label class="blank"><select id="q16">
+        <option value="">— choose —</option>
+        <option value="Ebola">Ebola</option>
+        <option value="Binary fission">Binary fission</option>
+        <option value="Endospore">Endospore</option>
+      </select></label>. A
+      <label class="blank"><select id="q17">
+        <option value="">— choose —</option>
+        <option value="Vaccine">Vaccine</option>
+        <option value="Antibiotic">Antibiotic</option>
+        <option value="Flagella">Flagella</option>
+      </select></label> helps protect people by preparing the immune system. When viruses spread rapidly in one area, it is called an
+      <label class="blank"><select id="q18">
+        <option value="">— choose —</option>
+        <option value="Epidemic">Epidemic</option>
+        <option value="Endospore">Endospore</option>
+        <option value="Conjugation">Conjugation</option>
+      </select></label>.
+    </div>
+
+    <div class="para">
+      <strong>Bacteria</strong><br>
+      <label class="blank"><select id="q19">
+        <option value="">— choose —</option>
+        <option value="Bacteria">Bacteria</option>
+        <option value="Protists">Protists</option>
+        <option value="Virus">Virus</option>
+      </select></label> are single-celled organisms without a nucleus. Their genetic material is found in the
+      <label class="blank"><select id="q20">
+        <option value="">— choose —</option>
+        <option value="Cytoplasm">Cytoplasm</option>
+        <option value="Ribosomes">Ribosomes</option>
+        <option value="Endospore">Endospore</option>
+      </select></label>, a gel-like substance inside the cell. Small structures called
+      <label class="blank"><select id="q21">
+        <option value="">— choose —</option>
+        <option value="Ribosomes">Ribosomes</option>
+        <option value="Flagella">Flagella</option>
+        <option value="Pili">Pili</option>
+      </select></label> make proteins, while
+      <label class="blank"><select id="q22">
+        <option value="">— choose —</option>
+        <option value="Flagella">Flagella</option>
+        <option value="Endospore">Endospore</option>
+        <option value="Cytoplasm">Cytoplasm</option>
+      </select></label> may help the bacteria move. Some bacteria also have
+      <label class="blank"><select id="q23">
+        <option value="">— choose —</option>
+        <option value="Pili">Pili</option>
+        <option value="Toxins">Toxins</option>
+        <option value="Eukarya">Eukarya</option>
+      </select></label>, hairlike structures that help them stick to surfaces.
+
+      Bacteria can reproduce quickly by
+      <label class="blank"><select id="q24">
+        <option value="">— choose —</option>
+        <option value="Binary fission">Binary fission</option>
+        <option value="Conjugation">Conjugation</option>
+        <option value="Endospore">Endospore</option>
+      </select></label>, in which one cell splits into two identical cells. They can also exchange genetic material through
+      <label class="blank"><select id="q25">
+        <option value="">— choose —</option>
+        <option value="Conjugation">Conjugation</option>
+        <option value="Binary fission">Binary fission</option>
+        <option value="Vaccine">Vaccine</option>
+      </select></label>, which increases diversity. In harsh conditions bacteria may form an
+      <label class="blank"><select id="q26">
+        <option value="">— choose —</option>
+        <option value="Endospore">Endospore</option>
+        <option value="Decomposers">Decomposers</option>
+        <option value="Host">Host</option>
+      </select></label>.
+
+      While some bacteria cause illness by releasing harmful
+      <label class="blank"><select id="q27">
+        <option value="">— choose —</option>
+        <option value="Toxins">Toxins</option>
+        <option value="Ribosomes">Ribosomes</option>
+        <option value="Nanometers">Nanometers</option>
+      </select></label>, many others are helpful. However, some bacteria become
+      <label class="blank"><select id="q28">
+        <option value="">— choose —</option>
+        <option value="Resistant">Resistant</option>
+        <option value="Autotrophs">Autotrophs</option>
+        <option value="Ebola">Ebola</option>
+      </select></label> to antibiotics, which makes infections harder to treat.
+    </div>
+
+    <div class="controls">
+      <button id="gradeBtn">Check Answers</button>
+      <button class="secondary" id="resetBtn">Reset</button>
+      <button class="secondary" id="showKeyBtn">Show Answer Key</button>
+    </div>
+
+    <div id="results" aria-live="polite"></div>
+
+    <div id="key" class="answer-key" style="display:none;">
+      <strong>Answer Key</strong>
+      <ol>
+        <li>Microorganisms</li>
+        <li>Eukarya</li>
+        <li>Protists</li>
+        <li>Prokaryotes</li>
+        <li>Eukaryotes</li>
+        <li>Autotrophs</li>
+        <li>Heterotrophs</li>
+        <li>Decomposers</li>
+        <li>Archaea</li>
+        <li>Bacteria</li>
+        <li>Virus</li>
+        <li>Host</li>
+        <li>Bacteriophage</li>
+        <li>Nanometers</li>
+        <li>Genetic material</li>
+        <li>Ebola</li>
+        <li>Vaccine</li>
+        <li>Epidemic</li>
+        <li>Bacteria</li>
+        <li>Cytoplasm</li>
+        <li>Ribosomes</li>
+        <li>Flagella</li>
+        <li>Pili</li>
+        <li>Binary fission</li>
+        <li>Conjugation</li>
+        <li>Endospore</li>
+        <li>Toxins</li>
+        <li>Resistant</li>
+      </ol>
+    </div>
+
+    <p class="small" style="margin-top:14px;">Word bank (for teacher reference): Microorganisms, Eukarya, Protists, Prokaryotes, Eukaryotes, Autotrophs, Heterotrophs, Decomposers, Archaea, Bacteria, Virus, Host, Bacteriophage, Nanometers, Genetic material, Ebola, Vaccine, Epidemic, Cytoplasm, Ribosomes, Flagella, Pili, Binary fission, Conjugation, Endospore, Toxins, Resistant</p>
+  </div>
+
+<script>
+(function(){
+  const KEY = {
+    q1: 'Microorganisms', q2: 'Eukarya', q3: 'Protists', q4: 'Prokaryotes', q5: 'Eukaryotes',
+    q6: 'Autotrophs', q7: 'Heterotrophs', q8: 'Decomposers', q9: 'Archaea', q10: 'Bacteria',
+    q11: 'Virus', q12: 'Host', q13: 'Bacteriophage', q14: 'Nanometers', q15: 'Genetic material',
+    q16: 'Ebola', q17: 'Vaccine', q18: 'Epidemic', q19: 'Bacteria', q20: 'Cytoplasm',
+    q21: 'Ribosomes', q22: 'Flagella', q23: 'Pili', q24: 'Binary fission', q25: 'Conjugation',
+    q26: 'Endospore', q27: 'Toxins', q28: 'Resistant'
+  };
+
+  const gradeBtn = document.getElementById('gradeBtn');
+  const resetBtn = document.getElementById('resetBtn');
+  const showKeyBtn = document.getElementById('showKeyBtn');
+  const results = document.getElementById('results');
+  const keyBox = document.getElementById('key');
+
+  function grade(){
+    results.innerHTML = '';
+    let total = Object.keys(KEY).length;
+    let correct = 0;
+    const details = document.createElement('div');
+
+    for (let i = 1; i <= total; i++){
+      const id = 'q' + i;
+      const el = document.getElementById(id);
+      const val = el ? el.value : '';
+      const isCorrect = val === KEY[id];
+      if (isCorrect) correct++;
+      const row = document.createElement('div');
+      row.className = 'result ' + (isCorrect ? 'correct' : 'incorrect');
+      row.style.marginBottom = '6px';
+      row.innerHTML = '<strong>Blank '+i+':</strong> ' + (isCorrect ? ('Correct — ' + val) : ('Incorrect — you chose "' + (val || 'nothing') + '". Correct: ' + KEY[id])) +
+        '<div class="small" style="margin-top:6px;color:#475569;">';
+      // short explanations for a few items to reinforce learning
+      if (id === 'q4') row.innerHTML += ' Prokaryotes are cells without a nucleus.';
+      if (id === 'q11') row.innerHTML += ' Viruses are nonliving and must use a host cell.';
+      if (id === 'q24') row.innerHTML += ' Binary fission is how many bacteria reproduce asexually.';
+      row.innerHTML += '</div>';
+      details.appendChild(row);
+    }
+
+    const percent = Math.round((correct/total)*100);
+    const summary = document.createElement('div');
+    summary.className = 'result ' + (percent >= 70 ? 'correct' : 'incorrect');
+    summary.innerHTML = '<div class="score">Score: ' + correct + ' / ' + total + ' (' + percent + '%)</div>' +
+      '<div class="small" style="margin-top:6px;">' + (percent >= 70 ? 'Nice work! Review any red items above.' : 'Keep practicing — review incorrect answers and try again.') + '</div>';
+    results.appendChild(summary);
+    results.appendChild(details);
+    summary.scrollIntoView({behavior:'smooth'});
+  }
+
+  gradeBtn.addEventListener('click', grade);
+
+  resetBtn.addEventListener('click', function(){
+    for (let i = 1; i <= 28; i++){
+      const el = document.getElementById('q' + i);
+      if (el) el.selectedIndex = 0;
+    }
+    results.innerHTML = '';
+    keyBox.style.display = 'none';
+  });
+
+  showKeyBtn.addEventListener('click', function(){
+    keyBox.style.display = keyBox.style.display === 'none' ? 'block' : 'none';
+    keyBox.scrollIntoView({behavior:'smooth'});
+  });
+})();
+</script>
+</body>
+</html>
